@@ -376,7 +376,63 @@ padding: 25px 20px;
 font-size: 14px;
 margin-top: 40px;
 }
+/* આખા ગેલેરી સેક્શન માટે નવો કસ્ટમ ક્લાસ */
+.custom-gallery-section {
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 16px !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
 
+/* આ સેક્શન અંદરની ગ્રીડ માટે */
+.custom-gallery-section .product-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* મોબાઈલમાં 2 કૉલમ */
+    gap: 12px !important;
+    width: 100% !important;
+}
+
+@media (min-width: 600px) {
+    .custom-gallery-section .product-grid {
+        grid-template-columns: repeat(3, 1fr) !important; /* ટેબ્લેટ */
+        gap: 16px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .custom-gallery-section .product-grid {
+        grid-template-columns: repeat(4, 1fr) !important; /* ડેસ્કટોપ */
+        gap: 20px !important;
+    }
+}
+
+/* ઈમેજ બોક્સ અને કવર માટે !important */
+.custom-gallery-section .card {
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.custom-gallery-section .img-container {
+    width: 100% !important;
+    aspect-ratio: 3 / 4 !important;
+    position: relative !important;
+    overflow: hidden !important;
+    background-color: #f0f0f0 !important;
+}
+
+.custom-gallery-section .img-container img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+    display: block !important;
+}
 @media (max-width: 600px) {
 .hero h1 { font-size: 26px; }
 .hero p { font-size: 15px; }
@@ -398,7 +454,7 @@ margin-top: 40px;
 <i class="fa-solid fa-boxes-stacked"></i> સુરત લોટશોટ
 </a>
 <div class="nav-contacts">
-<a href="tel:7046460277" class="btn-call-nav"><i class="fa-solid fa-phone"></i> 9913377012</a>
+<a href="tel:7046460277" class="btn-call-nav"><i class="fa-solid fa-phone"></i> 7046460277</a>
 </div>
 </div>
 </header>
@@ -418,10 +474,10 @@ margin-top: 40px;
 </div>
 
 <div class="hero-actions">
-<a href="https://wa.me/919913377012?text=નમસ્તે,%20મારી%20પાસે%20લોટશોટનો%20માલ%20છે." class="btn btn-wa">
+<a href="https://wa.me/917046460277?text=નમસ્તે,%20મારી%20પાસે%20લોટશોટનો%20માલ%20છે." class="btn btn-wa">
 <i class="fa-brands fa-whatsapp"></i> માલના ફોટા WhatsApp કરો
 </a>
-<a href="tel:7046460277" class="btn btn-call">
+<a href="tel:9913377012" class="btn btn-call">
 <i class="fa-solid fa-phone"></i> કોલ કરો: 7046460277
 </a>
 </div>
@@ -448,7 +504,7 @@ margin-top: 40px;
 </div>
 
 <!-- Gallery Items -->
-<div class="container">
+<div class="container custom-gallery-section">
 <div class="product-grid">
 
 <!-- 1. Off-white A-line Kurta -->
