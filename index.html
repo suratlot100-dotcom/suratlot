@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>સુરત ક્લોથિંગ લોટશોટ - દરેક પ્રકારનો ગારમેન્ટ માલ રોકડેથી લઈએ છીએ</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<style>
+:root {
+--primary: #c2185b;
+--primary-dark: #880e4f;
+--secondary: #1a237e;
+--dark: #212121;
+--light: #f8f9fa;
+--white: #ffffff;
+--whatsapp: #25d366;
+}
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+background-color: var(--light);
+color: var(--dark);
+line-height: 1.6;
+}
+
+/* Top Notification Bar */
+.top-bar {
+background: var(--primary-dark);
+color: white;
+text-align: center;
+padding: 8px 15px;
+font-size: 14px;
+font-weight: 500;
+}
+
+/* Header / Navbar */
+header {
+background: var(--white);
+box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+.navbar {
+max-width: 1200px;
+margin: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 20px;
+}
+
+.logo {
+font-size: 24px;
+font-weight: bold;
+color: var(--primary);
+text-decoration: none;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+.nav-contacts {
+display: flex;
+gap: 10px;
+}
+
+.btn-call-nav {
+background: var(--primary);
+color: white;
+padding: 8px 16px;
+border-radius: 20px;
+text-decoration: none;
+font-size: 14px;
+font-weight: 600;
+display: flex;
+align-items: center;
+gap: 6px;
+transition: 0.3s;
+}
+
+.btn-call-nav:hover {
+background: var(--primary-dark);
+}
+
+/* Hero Section */
+.hero {
+background: linear-gradient(135deg, rgba(194, 24, 91, 0.95), rgba(26, 35, 126, 0.9)), 
+url('https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=80') center/cover;
+color: white;
+text-align: center;
+padding: 70px 20px;
+}
+
+.hero h1 {
+font-size: 36px;
+margin-bottom: 15px;
+font-weight: 700;
+}
+
+.hero p {
+font-size: 18px;
+max-width: 750px;
+margin: 0 auto 25px auto;
+color: #ffe0eb;
+}
+
+.hero-tags {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px;
+margin-bottom: 30px;
+}
+
+.hero-tags span {
+background: rgba(255,255,255,0.2);
+padding: 6px 14px;
+border-radius: 15px;
+font-size: 14px;
+}
+
+.hero-actions {
+display: flex;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
+}
+
+.btn {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+padding: 12px 26px;
+border-radius: 30px;
+text-decoration: none;
+font-weight: bold;
+font-size: 16px;
+transition: all 0.3s ease;
+}
+
+.btn-wa {
+background: var(--whatsapp);
+color: white;
+}
+
+.btn-call {
+background: var(--white);
+color: var(--primary-dark);
+}
+
+.
+
+Tushar:
+btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Container & Titles */
+.container {
+max-width: 1200px;
+margin: auto;
+padding: 40px 20px;
+}
+
+.section-header {
+text-align: center;
+margin-bottom: 30px;
+}
+
+.section-header h2 {
+font-size: 30px;
+color: var(--dark);
+margin-bottom: 8px;
+}
+
+.section-header p {
+color: #666;
+font-size: 16px;
+}
+
+/* Category Filter Buttons */
+.filter-buttons {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 10px;
+margin-bottom: 35px;
+}
+
+.filter-btn {
+background: white;
+border: 2px solid #e0e0e0;
+padding: 9px 20px;
+border-radius: 25px;
+cursor: pointer;
+font-size: 15px;
+font-weight: 600;
+color: #444;
+transition: all 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+background: var(--primary);
+border-color: var(--primary);
+color: white;
+box-shadow: 0 4px 10px rgba(194, 24, 91, 0.25);
+}
+
+/* Gallery Grid */
+.gallery-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+gap: 20px;
+}
+
+.product-card {
+background: white;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+transition: transform 0.3s ease;
+cursor: pointer;
+}
+
+.product-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.product-img {
+width: 100%;
+height: 280px;
+object-fit: cover;
+display: block;
+background-color: #eee;
+}
+
+.product-info {
+padding: 15px;
+text-align: center;
+}
+
+.product-info h3 {
+font-size: 17px;
+margin-bottom: 5px;
+color: var(--dark);
+}
+
+.product-badge {
+display: inline-block;
+background: #fce4ec;
+color: var(--primary);
+padding: 3px 10px;
+border-radius: 12px;
+font-size: 12px;
+font-weight: bold;
+}
+
+/* Why Sell to Us */
+.features-section {
+background: white;
+border-radius: 16px;
+padding: 35px 25px;
+margin: 40px 0;
+box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+}
+
+.features-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 20px;
+text-align: center;
+margin-top: 25px;
+}
+
+.feature-box i {
+font-size: 32px;
+color: var(--primary);
+margin-bottom: 12px;
+}
+
+.feature-box h4 {
+font-size: 17px;
+margin-bottom: 6px;
+}
+
+.feature-box p {
+font-size: 14px;
+color: #666;
+}
+
+/* Contact Section */
+.contact-box {
+background: linear-gradient(to right, #ffffff, #fff3f8);
+border: 2px dashed #f48fb1;
+border-radius: 16px;
+padding: 35px 20px;
+text-align: center;
+margin-top: 30px;
+}
+
+.contact-numbers {
+display: flex;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
+margin: 20px 0;
+}
+
+.contact-pill {
+background: white;
+border: 1px solid #ffd5e1;
+padding: 12px 22px;
+border-radius: 30px;
+text-decoration: none;
+
+Tushar:
+color: var(--dark);
+font-weight: bold;
+font-size: 17px;
+box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+display: inline-flex;
+align-items: center;
+gap: 8px;
+}
+
+.contact-pill i {
+color: var(--primary);
+}
+
+/* Modal for Image Preview */
+.modal {
+display: none;
+position: fixed;
+z-index: 999;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0,0,0,0.85);
+align-items: center;
+justify-content: center;
+padding: 20px;
+}
+
+.modal-content {
+max-width: 90%;
+max-height: 80vh;
+border-radius: 8px;
+}
+
+.modal-close {
+position: absolute;
+top: 20px;
+right: 30px;
+color: white;
+font-size: 35px;
+cursor: pointer;
+}
+
+/* Footer */
+footer {
+background: var(--dark);
+color: white;
+text-align: center;
+padding: 25px 20px;
+font-size: 14px;
+margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+.hero h1 { font-size: 26px; }
+.hero p { font-size: 15px; }
+.product-img { height: 230px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Notification Bar -->
+<div class="top-bar">
+⚡ તમારી પાસે વધારાનો સ્ટોક કે લોટશોટનો માલ છે? અમે રોકડેથી તમામ સામાન ખરીદીએ છીએ!
+</div>
+
+<!-- Header -->
+<header>
+<div class="navbar">
+<a href="#" class="logo">
+<i class="fa-solid fa-boxes-stacked"></i> સુરત લોટશોટ
+</a>
+<div class="nav-contacts">
+<a href="tel:7046460277" class="btn-call-nav"><i class="fa-solid fa-phone"></i> 9913377012</a>
+</div>
+</div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+<h1>દરેક પ્રકારનો કપડાંનો લોટશોટ માલ રોકડેથી ખરીદીએ છીએ</h1>
+<p>કુર્તી, ટુ પીસ, થ્રી પીસ, શર્ટ્સ, લેડીઝ વેર, જેન્ટ્સ વેર અને કિડ્સ વેર - ગમે તેટલો મોટો લોટ હોય, તાત્કાલિક પેમેન્ટ સાથે અમે લઈએ છીએ.</p>
+
+<div class="hero-tags">
+<span>✓ કુર્તી</span>
+<span>✓ 2-પીસ / 3-પીસ સેટ</span>
+<span>✓ શર્ટ્સ</span>
+<span>✓ લેડીઝ વેર</span>
+<span>✓ જેન્ટ્સ વેર</span>
+<span>✓ કિડ્સ વેર</span>
+</div>
+
+<div class="hero-actions">
+<a href="https://wa.me/919913377012?text=નમસ્તે,%20મારી%20પાસે%20લોટશોટનો%20માલ%20છે." class="btn btn-wa">
+<i class="fa-brands fa-whatsapp"></i> માલના ફોટા WhatsApp કરો
+</a>
+<a href="tel:7046460277" class="btn btn-call">
+<i class="fa-solid fa-phone"></i> કોલ કરો: 7046460277
+</a>
+</div>
+</section>
+
+<!-- Main Container -->
+<div class="container">
+
+<!-- Category Filter Section -->
+<div class="section-header">
+<h2>અમે ખરીદતા સામાનની કેટેગરી અને સેમ્પલ</h2>
+<p>નીચે આપેલા બટન પર ક્લિક કરીને અલગ અલગ કપડાંના સેમ્પલ જુઓ:</p>
+</div>
+
+<!-- Filter Buttons -->
+<div class="filter-buttons">
+<button class="filter-btn active" onclick="filterGallery('all')">બધું જુઓ (All)</button>
+<button class="filter-btn" onclick="filterGallery('kurti')">કુર્તી (Kurti)</button>
+<button class="filter-btn" onclick="filterGallery('two-three-piece')">ટુ-પીસ / થ્રી-પીસ</button>
+<button class="filter-btn" onclick="filterGallery('shirts')">શર્ટ્સ (Shirts)</button>
+<button class="filter-btn" onclick="filterGallery('ladies')">લેડીઝ વેર (Ladies)</button>
+<button class="filter-btn" onclick="filterGallery('gents')">જેન્ટ્સ વેર (Gents)</button>
+<button class="filter-btn" onclick="filterGallery('kids')">કિડ્સ વેર (Kids)</button>
+</div>
+
+<!-- Gallery Items -->
+<div class="container">
+<div class="product-grid">
+
+<!-- 1. Off-white A-line Kurta -->
+<div class="card" data-category="kurti" onclick="showPreview(this)">
+<img src="https://www.libas.in/cdn/shop/files/off-white-abstract-printed-panelled-a-line-kurta-43592_02bb50dd-612a-44a4-ae08-8f993460bf64.jpg?v=1779795888&width=1080" alt="Kurta">
+<div class="card-body">
+<h4>ડિઝાઇનર કુર્તી</h4>
+<span class="tag">કુર્તી લોટ</span>
+</div>
+</div>
+
+<!-- 2. Amazon Kurti / Ethnic Set -->
+<div class="card" data-category="kurti" onclick="showPreview(this)">
+<img src="https://m.media-amazon.com/images/I/815LG6b2s7L._SX679_.jpg" alt="Kurti Set">
+<div class="card-body">
+<h4>એથ્નિક કુર્તી વેર</h4>
+<span class="tag">કુર્તી લોટ</span>
+</div>
+</div>
+
+<!-- 3. Meesho Product -->
+<div class="card" data-category="set" onclick="showPreview(this)">
+<img src="https://images.meesho.com/images/products/1098817191/mmfda_512.avif?width=512" alt="Two Piece Set">
+<div class="card-body">
+<h4>ટુ-પીસ / પ્લાઝો સેટ</h4>
+<span class="tag">સેટ લોટ</span>
+</div>
+</div>
+
+<!-- 4. Flipkart Ethnic Set -->
+<div class="card" data-category="set" onclick="showPreview(this)">
+<img src="https://rukminim2.flixcart.com/image/1600/1600/xif0q/ethnic-set/m/u/p/3xl-dc-2062-silver-rabbit-original-imahzbzrphj6gggk.jpeg?q=90" alt="Three Piece Dupatta Suit">
+<div class="card-body">
+<h4>થ્રી-પીસ દુપટ્ટા સેટ</h4>
+<span class="tag">3-Piece સેટ</span>
+</div>
+</div>
+
+<!-- 5. Casual Shirts -->
+<div class="card" data-category="shirt" onclick="showPreview(this)">
+<img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=600&q=80" alt="Casual Shirts">
+<div class="card-body">
+<h4>કેઝ્યુઅલ જેન્ટ્સ શર્ટ્સ</h4>
+<span class="tag">શર્ટ્સ લોટ</span>
+</div>
+</div>
+
+<!-- 6. Printed Shirts -->
+<div class="card" data-category="shirt" onclick="showPreview(this)">
+<img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=600&q=80" alt="Printed Shirts">
+<div class="card-body">
+<h4>પ્રિન્ટેડ શર્ટ્સ ક્વોલિટી</h4>
+<span class="tag">શર્ટ્સ લોટ</span>
+</div>
+</div>
+
+<!-- 7. Ladies Fashion -->
+<div class="card" data-category="ladies" onclick="showPreview(this)">
+<img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=600&q=80" alt="Ladies Wear">
+<div class="card-body">
+<h4>વેસ્ટર્ન & ટોપ્સ વેર</h4>
+<span class="tag">લેડીઝ વેર</span>
+</div>
+</div>
+
+<!-- 8. Mirraw Ethnic / Kids Collection -->
+<div class="card" data-category="kids" onclick="showPreview(this)">
+<img src="https://assets0.mirraw.com/images/13987487/image_original_zoom.jpeg?1777648119" alt="Ethnic Kids / Fancy">
+<div class="card-body">
+</div>
+</div>
+
+</div>
+
+<!-- Features / Why Sell To Us -->
+<div class="features-section">
+<h3 style="text-align:center; font-size:22px; color: var(--primary);">અમારી સાથે ડીલ કરવાના ફાયદા</h3>
+<div class="features-grid">
+<div class="feature-box">
+<i class="fa-solid fa-money-bill-wave"></i>
+<h4>રોકડેથી ચુકવણી</h4>
+<p>માલ જોઈને તરત જ ઓન-ધ-સ્પોટ પેમેન્ટ કરવામાં આવશે.</p>
+</div>
+<div class="feature-box">
+<i class="fa-solid fa-truck-ramp-box"></i>
+<h4>મોટા જથ્થામાં ખરીદી</h4>
+<p>નાનો કે મોટો કોઈપણ લોટ હોય, અમે બધો જ માલ લઈએ છીએ.</p>
+</div>
+<div class="feature-box">
+<i class="fa-solid fa-handshake"></i>
+<h4>ઝડપી ડીલ</h4>
+<p>સેમ્પલ જોયા બાદ તરત યોગ્ય ભાવ અને તાત્કાલિક નિર્ણય.</p>
+</div>
+</div>
+</div>
+
+<!-- Contact Box -->
+<div class="contact-box">
+<h2 style="color: var(--primary); margin-bottom: 8px;">લોટશોટ માલ વેચવા માટે આજે જ સંપર્ક કરો</h2>
+<p style="font-size: 17px; color: #444;">
+<i class="fa-solid fa-location-dot" style="color:red;"></i> <strong>સરનામું:</strong> સુરત, ગુજરાત
+</p>
+<p style="margin-top: 5px; color: #666;">માલના ફોટા અને ક્વોન્ટિટી મોકલવા માટે નીચે આપેલા નંબર પર સીધો સંપર્ક કરો:</p>
+
+<div class="contact-numbers">
+<a href="tel:9913377012" class="contact-pill">
+<i class="fa-solid fa-phone"></i> 9913377012
+</a>
+<a href="tel:7046460277" class="contact-pill">
+<i class="fa-solid fa-phone"></i> 7046460277
+</a>
+</div>
+
+<a href="https://wa.me/917046460277?text=નમસ્તે,%20મારી%20પાસે%20કપડાંનો%20લોટશોટનો%20માલ%20છે." class="btn btn-wa" style="margin-top:10px;">
+<i class="fa-brands fa-whatsapp"></i> WhatsApp પર વિગત મોકલો
+</a>
+</div>
+
+</div>
+
+<!-- Image Preview Modal -->
+<div id="imageModal" class="modal" onclick="closePreview()">
+<span class="modal-close">&times;</span>
+<img class="modal-content" id="modalImg" alt="Preview">
+</div>
+
+<!-- Footer -->
+<footer>
+<p>© 2026 સુરત ક્લોથિંગ લોટશોટ - સર્વાધિકાર સુરક્ષિત | સુરત, ગુજરાત</p>
+</footer>
+
+<!-- JavaScript For Category Filtering & Image Preview -->
+<script>
+// Category Filter Function
+function filterGallery(category) {
+// Update active button state
+const buttons = document.querySelectorAll('.filter-btn');
+buttons.forEach(btn => btn.classList.remove('active'));
+event.target.classList.add('active');
+
+// Show / Hide products
+const cards = document.querySelectorAll('.product-card');
+cards.forEach(card => {
+const cardCategory = card.getAttribute('data-category');
+if (category === 'all' || cardCategory === category) {
+card.style.display = 'block';
+} else {
+card.style.display = 'none';
+}
+});
+}
+
+// Image Preview Modal
+function openPreview(element) {
+const imgSrc = element.querySelector('img').src;
+const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImg');
+modal.style.display = 'flex';
+modalImg.src = imgSrc;
+}
+
+function closePreview() {
+document.
+
+Tushar:
+getElementById('imageModal').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
+
+
